@@ -5722,6 +5722,49 @@ progress {
     display: none !important;
   }
 }
-body {
-  background: red;
+.header {
+  padding: 20px 0;
+}
+.header .container {
+  display: flex;
+  justify-content: space-between;
+}
+.header__logo {
+  font-size: 2.3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.header__menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header__menu-link {
+  padding: 20px;
+  font-weight: 600;
+  color: #191f26;
+  text-decoration: none;
+}
+.header__menu-link:hover, .header__menu-link--active {
+  background: blue;
+  color: white;
+}
+.header__account {
+  display: flex;
+  align-items: center;
+}
+.header__account-link {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #234dd4;
+  margin: 0 0.8rem;
+  color: #234dd4;
+}
+.header__account-link:hover {
+  background-color: #3396cc;
+  cursor: pointer;
 }
