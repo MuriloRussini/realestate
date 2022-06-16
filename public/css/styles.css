@@ -5768,3 +5768,83 @@ progress {
   background-color: #3396cc;
   cursor: pointer;
 }
+
+.hero {
+  padding: 0 50px;
+  position: relative;
+  overflow: hidden;
+}
+.hero__images {
+  display: flex;
+  max-width: 100vw;
+  height: calc(100vh - 150px);
+  transition: all 0.6s ease-in-out;
+}
+.hero__images:hover {
+  transform: translate3d(-100%, 0, 0);
+}
+.hero__image {
+  overflow: hidden;
+  flex-shrink: 0;
+  width: 100%;
+  position: relative;
+}
+.hero__image-img {
+  width: 100vw;
+  flex-shrink: 0;
+  width: 100vw;
+  overflow: hidden;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.hero__info {
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  font-size: 4rem;
+  display: flex;
+  flex-direction: column;
+}
+.hero__subtitle {
+  font-size: 1rem;
+  color: white;
+}
+.hero__title {
+  font-size: 6rem;
+  width: 400px;
+  line-height: 1;
+  color: white;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+.hero__info-link {
+  font-size: 1.2rem;
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+}
+.hero__indicator {
+  position: absolute;
+  bottom: 0;
+  right: 50px;
+  background-color: white;
+  display: flex;
+  padding: 2rem;
+}
+.hero__indicator-item {
+  display: flex;
+}
+.hero__indicator-number {
+  font-size: 3rem;
+  font-weight: 900;
+  padding-right: 1.5rem;
+}
+.hero__indicator-text {
+  display: flex;
+  align-items: center;
+  width: 60px;
+  margin-right: 3rem;
+  font-weight: 700;
+}
