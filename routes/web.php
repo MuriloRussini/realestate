@@ -17,8 +17,8 @@ Route::get('/', function () {
     return view('pages/home');
 });
 
-Route::get('/{property_type}/{listing_type}/', function () {
-    return view('welcome');
+Route::get('/{property_type}/{listing_type}/{city}', function () {
+    return view('pages/listings');
 });
 
 Route::get('/listing/{slug}/{id}', function () {
