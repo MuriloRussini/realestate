@@ -5,7 +5,7 @@
     </a>
 
     <div class="header__menu">
-      <a href="home/for-sale/south-beach" class="header__menu-link">Listing</a>
+      <a href="/home/for-sale/south-beach" class="header__menu-link">Listing</a>
       <a href="" class="header__menu-link">Property</a>
       <a href="" class="header__menu-link">Pages</a>
     </div>

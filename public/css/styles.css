@@ -6071,3 +6071,48 @@ progress {
   text-align: center;
   display: block;
 }
+
+.account-layout .request-list h2 {
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+.account-layout .request-list__wrapper {
+  background: white;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 2rem;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.account-layout .request-list__details {
+  font-size: 1.4rem;
+  color: #7c8791;
+}
+.account-layout .request-list__info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.account-layout .request-list__info-title {
+  font-weight: 700;
+}
+.account-layout .request-list__info-status {
+  padding: 10px 15px;
+}
+.account-layout .request-list__info-status--sucess {
+  background: greenyellow;
+  font-weight: 700;
+}
+.account-layout .request-list__info-status--canceled {
+  background: orange;
+  font-weight: 700;
+}
+.account-layout .request-list__info-status--sold {
+  background: red;
+  color: white;
+  font-weight: 700;
+}
