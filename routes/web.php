@@ -26,11 +26,11 @@ Route::get('/listing/{slug}/{id}', function () {
 });
 
 Route::get('/login', function () {
-    return view('welcome');
+    return view('pages/login');
 });
 
 Route::get('/register', function () {
-    return view('welcome');
+    return view('pages/register');
 });
 
 Route::get('/account/saved', function () {
