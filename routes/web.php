@@ -17,12 +17,14 @@ Route::get('/', function () {
     return view('pages/home');
 });
 
-Route::get('/{property_type}/{listing_type}/{city}', function () {
-    return view('pages/listings');
+// Show single listing
+Route::get('/listing/{slug}/{id}', function () {
+    return view('pages/single-listing');
 });
 
-Route::get('/listing/{slug}/{id}', function () {
-    return view('welcome');
+// Show all listings
+Route::get('/{property_type}/{listing_type}/{city}', function () {
+    return view('pages/listings');
 });
 
 Route::get('/login', function () {
