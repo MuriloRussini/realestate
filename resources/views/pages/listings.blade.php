@@ -47,7 +47,7 @@
               <img src="https://cdn.onekindesign.com/wp-content/uploads/2017/01/Contemporary-Home-Design-Vertical-Arts-Architecture-01-1-Kindesign.jpg" alt="">
               <div class="listings-properties__saved"><i class="fa-solid fa-heart"></i></div>
               <span class="listings-properties__item-price">$250,000</span>
-              <span class="listings-properties__item-details"><i class="fa-solid fa-bed"></i> 4 <i class="fa-solid fa-bath"></i> 3 <i class="fa-solid fa-ruler"></i></i> 2440 SQFT</span>
+              <span class="listings-properties__item-details"><i class="fa-solid fa-bed"></i> 4 <i class="fa-solid fa-bath"></i> 3 <i class="fa-solid fa-ruler"></i> 2440 SQFT</span>
               <span class="listings-properties__item-address">2135 Grand St,<br>
               Miami Beach, FL 23456</span>
               <div class="listings-properties__item-line"></div>

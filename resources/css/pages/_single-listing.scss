@@ -1,6 +1,7 @@
 .single-listing-page{
   .listing-top{
     position: relative;
+    height: 600px;
     &__img{
       width: 100%;
       height: 600px;
@@ -23,15 +24,16 @@
     }
     &__form{
       width: 300px;
-      height: 500px;
       background: white;
       border-radius: 15px;
       box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
       padding: 20px;
     }
-    &__form-title{
+    &__form-label{
+      display: block;
       font-size: 1rem;
       font-weight: 700;
+      margin-bottom: .5rem;
     }
     &__form-group{
       width: 100%;
@@ -45,6 +47,7 @@
     }
     &__form-option, &__form-button{
       padding: 0 15px;
+      width: 100%;
       height: 40px;
       display: flex;
       justify-content: center;
@@ -60,6 +63,80 @@
       }
       &:hover{
         background-color: rgb(245, 246, 247);
+      }
+    }
+    &__form-button{
+      background-color: rgb(219, 105, 29);
+      &:hover{
+        color: white;
+        background-color: rgb(219, 105, 29);
+      }
+    }
+  }
+  .listing-info{
+    padding: 50px 0;
+    h1{
+      font-size: 2rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 2rem;
+    }
+    &__details{
+      display: flex;
+      justify-content: space-between;
+      max-width: 300px;
+    }
+    &__details-text{
+      font-size: 1.2rem;
+      color: #7c8791;
+    }
+    &__agent-title{
+      display: block;
+      font-size: 1rem;
+      // color: #7c8791;
+      font-weight: 700;
+    }
+    &__agent-name{
+      display: block;
+      font-size: 2rem;
+      text-transform: uppercase;
+      // color: #7c8791;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+  }
+  .listing-extras{
+    &__details{
+      h2{
+        font-size: 1.6rem;
+        font-weight: 700;
+        margin-bottom: 2rem;
+      }
+      h3{
+        font-size: 1.6rem;
+        font-weight: 700;
+        margin-bottom: 2rem;
+      }
+      ul{
+        list-style: circle;
+        li{
+          margin-bottom: 1rem;
+        }
+      }
+      p{
+        line-height: 2;
+        margin-bottom: 2rem;
+      }
+    }
+    &__gallery{
+      h2{
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 2rem;
+      }
+      img{
+        width: 100%;
+        margin-bottom: 10px;
       }
     }
   }
