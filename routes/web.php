@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Home Page
 Route::get('/', function () {
     return view('pages/home');
 });
@@ -25,20 +26,31 @@ Route::get('/listing/{slug}/{id}', function () {
 // Show all listings
 Route::get('/{property_type}/{listing_type}/{city}', function () {
     return view('pages/listings');
-});
+})->name('listings');
 
-Route::get('/login', function () {
-    return view('pages/login');
-});
+// // User Login
+// Route::get('/home/login', function () {
+//     return view('pages/login');
+// });
 
-Route::get('/register', function () {
-    return view('pages/register');
-});
+// // User Register
+// Route::get('/home/register', function () {
+//     return view('pages/register');
+// });
 
-Route::get('/account/saved', function () {
+// User Saved Listings
+Route::get('/account', function () {
     return view('pages/saved-listings');
-});
+})->name('account');
 
+// User Showing Status
 Route::get('/account/show-status', function () {
     return view('pages/show-status');
-});
+})->name('show-status');
+
+// Route::get('/dashboard', function () {
+//     return view('dashboard');
+// })->middleware(['auth'])->name('dashboard');
+
+require __DIR__.'/auth.php';
+

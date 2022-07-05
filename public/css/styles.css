@@ -5866,6 +5866,10 @@ progress {
   background-color: #3396cc;
   cursor: pointer;
 }
+.header__account-link--anchor {
+  margin-right: 1.5rem;
+  text-decoration: none;
+}
 
 .hero {
   padding: 0 50px;
@@ -6317,4 +6321,10 @@ progress {
 .single-listing-page .listing-extras__gallery img {
   width: 100%;
   margin-bottom: 10px;
+}
+
+.error-sub-text {
+  padding: 10px 0;
+  color: red;
+  font-size: 0.8rem;
 }
