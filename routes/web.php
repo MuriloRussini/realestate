@@ -30,7 +30,13 @@ Route::group([
         
         Route::get('/create', [\App\Http\Controllers\Admin\ListingController::class, 'create'])->name('create');
 
-        Route::get('/{id}/edit', [\App\Http\Controllers\Admin\ListingController::class, 'edit'])->name('edit');
+        Route::post('/', [\App\Http\Controllers\Admin\ListingController::class, 'store'])->name('store');
+
+        Route::get('/{slug}/{id}/edit', [\App\Http\Controllers\Admin\ListingController::class, 'edit'])->name('edit');
+
+        Route::put('/{slug}/{id}', [\App\Http\Controllers\Admin\ListingController::class, 'update'])->name('update');
+
+        Route::get('/{slug}/{id}/delete', [\App\Http\Controllers\Admin\ListingController::class, 'destroy'])->name('delete');
     });
 });
 
