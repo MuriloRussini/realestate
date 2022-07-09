@@ -10,7 +10,7 @@
       <div class="mT-30">
         <form method="POST" action="{{ route('admin.listings.store') }}">
           @csrf
-          <div class="mb-3"><label class="form-label" for="adress">adress</label> <input type="text" name="adress"
+          <div class="mb-3"><label class="form-label" for="adress">Address</label> <input type="text" name="adress"
               class="form-control" id="adress" placeholder="ex: 1234 Main St" value="{{ old('adress') }}" autocomplete="off">
               @error('adress')
                 <div class="error-sub-text">
@@ -18,7 +18,7 @@
                 </div>
               @enderror
           </div>
-          <div class="mb-3"><label class="form-label" for="adress2">adress 2</label> <input type="text" name="adress2"
+          <div class="mb-3"><label class="form-label" for="adress2">Address 2</label> <input type="text" name="adress2"
               class="form-control" id="adress2" placeholder="ex: Apartment, studio, or floor" value="{{ old('adress2') }}"></div>
           <div class="row">
             <div class="mb-3 col-md-6"><label class="form-label" for="city">City</label> <input type="text" name="city"
