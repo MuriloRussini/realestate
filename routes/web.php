@@ -38,6 +38,20 @@ Route::group([
         Route::put('/{slug}/{id}', [\App\Http\Controllers\Admin\ListingController::class, 'update'])->name('update');
 
         Route::get('/{slug}/{id}/delete', [\App\Http\Controllers\Admin\ListingController::class, 'destroy'])->name('delete');
+
+        // Photo Listing
+        
+        Route::get('/{slug}/{id}/photos', [\App\Http\Controllers\Admin\PhotoController::class, 'index'])->name('photos');
+        
+        Route::get('/{slug}/{id}/photos/create', [\App\Http\Controllers\Admin\PhotoController::class, 'create'])->name('photos.create');
+        
+        Route::post('/{slug}/{id}/photos', [\App\Http\Controllers\Admin\PhotoController::class, 'store'])->name('photos.store');
+
+        Route::get('/{slug}/{id}/photos/{photo_id}/edit', [\App\Http\Controllers\Admin\PhotoController::class, 'edit'])->name('photos.edit');
+        
+        Route::put('/{slug}/{id}/photos', [\App\Http\Controllers\Admin\PhotoController::class, 'update'])->name('photos.update');
+        
+        Route::get('/{slug}/{id}/photos/{photos_id}/delete', [\App\Http\Controllers\Admin\PhotoController::class, 'destroy'])->name('photos.delete');
     });
 });
 
