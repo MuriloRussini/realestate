@@ -68,6 +68,7 @@ class PhotoController extends Controller
         $photo->size = $size;
         $photo->user_id = auth()->user()->id;
         $photo->listing_id = $id;
+        $photo->featured = 0;
         // $listing->adress = $request->get('adress');
         // $listing->adress2 = $request->get('adress2');
         // $listing->city = $request->get('city');

@@ -39,6 +39,10 @@
                             </div>
                           @endif --}}
                         </td>
+                        <td>
+                          <a href="">Make Featured</a>
+                          <a href="">Delete</a>
+                        </td>
                     </tr>
                   @endforeach
                 </tbody>
