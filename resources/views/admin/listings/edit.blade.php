@@ -114,7 +114,7 @@
             </div>
 
             <div class="form-group" style="display: flex; margin-top: 1rem; flex-direction: column;">
-              <a href="{{ route('admin.listings.photos', ['slug' => $listing->slug, 'id' => $listing->id]) }}" class="btn cur-p btn-outline-success" onclick="return confirm('Did you save your updates?')" style="width: 100%; margin-top: 1rem; color: black;">Gallery</a>
+              <a href="{{ route('admin.listings.photos', ['slug' => $listing->slug, 'id' => $listing->id]) }}" class="btn cur-p btn-outline-success" onclick="return confirm('Did you save your updates?')" style="width: 100%; margin-top: 1rem; color: black;">Photos</a>
             </div>
 
             <div class="form-group" style="display: flex; margin-top: 1rem; flex-direction: column;">

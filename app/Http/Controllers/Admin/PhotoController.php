@@ -20,15 +20,15 @@ class PhotoController extends Controller
     {
         $photos = Photo::where(['user_id' => auth()->user()->id, 'listing_id' =>$id])->paginate(10);
 
-        if ($photos->total() < 1) {
-            return redirect('/admin/listings/{$slug}/{$id}/photos/create');
+        if ($photos->total() >= 0) {
+            return view('admin/listings/photos/index', [
+                'photos' => $photos,
+                'slug' => $slug,
+                'id' => $id
+            ]);
         }
 
-        return view('admin/listings/photos/index', [
-            'photos' => $photos,
-            'slug' => $slug,
-            'id' => $id
-        ]);
+        return redirect('/admin/listings/{$slug}/{$id}/photos/create');
     }
 
     /**
@@ -78,40 +78,6 @@ class PhotoController extends Controller
     }
 
     /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
      * Remove the specified resource from storage.
      *
      * @param  int  $id
@@ -133,8 +99,10 @@ class PhotoController extends Controller
             'listing_id' => $id,
             'featured' => 1,
             ])->first();
-        $old_photo->featured = 0;
-        $old_photo->save();
+            if($old_photo != null) {
+                $old_photo->featured = 0;
+                $old_photo->save();                
+            }
 
         $new_photo = Photo::where([
             'listing_id' => $id,

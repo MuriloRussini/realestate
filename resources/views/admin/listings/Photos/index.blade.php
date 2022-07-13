@@ -7,6 +7,7 @@
       <h1>Show Photos Listings</h1>
     </div>
     <div class="col-md-2">
+      <a href="{{ route('admin.listings.edit', ['slug' => $slug, 'id' => $id]) }}" class="btn cur-p btn-primary" style="width: 100%; margin-top: 1rem; color: white; background-color: green;">Go back to edit page</a>
       <a href="{{ route('admin.listings.photos.create', ['slug' => $slug, 'id' => $id]) }}" class="btn cur-p btn-primary" style="width: 100%; margin-top: 1rem; color: black;">Add New Photo</a>
     </div>
   </div>
