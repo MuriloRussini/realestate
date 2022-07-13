@@ -51,9 +51,9 @@ Route::group([
         
         Route::put('/{slug}/{id}/photos', [\App\Http\Controllers\Admin\PhotoController::class, 'update'])->name('photos.update');
         
-        Route::get('/{slug}/{id}/photos/{photos_id}/delete', [\App\Http\Controllers\Admin\PhotoController::class, 'destroy'])->name('photos.delete');
+        Route::get('/{slug}/{id}/photos/{photo_id}/delete', [\App\Http\Controllers\Admin\PhotoController::class, 'destroy'])->name('photos.delete');
         
-        Route::get('/{slug}/{id}/photos/{photos_id}/featured', [\App\Http\Controllers\Admin\PhotoController::class, 'featured'])->name('photos.featured');
+        Route::get('/{slug}/{id}/photos/{photo_id}/featured', [\App\Http\Controllers\Admin\PhotoController::class, 'featured'])->name('photos.featured');
     });
 });
 

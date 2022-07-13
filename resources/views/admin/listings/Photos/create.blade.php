@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 
-@section('page-title', 'Create New Listing')
+@section('page-title', 'Add New Photo')
 
 @section('content')
 <div id="mainContent">

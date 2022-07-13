@@ -24,8 +24,10 @@ class PhotoController extends Controller
             return redirect('/admin/listings/{$slug}/{$id}/photos/create');
         }
 
-        return view('admin/listings/photos/index',[
-            'photos' => $photos
+        return view('admin/listings/photos/index', [
+            'photos' => $photos,
+            'slug' => $slug,
+            'id' => $id
         ]);
     }
 
@@ -69,16 +71,6 @@ class PhotoController extends Controller
         $photo->user_id = auth()->user()->id;
         $photo->listing_id = $id;
         $photo->featured = 0;
-        // $listing->adress = $request->get('adress');
-        // $listing->adress2 = $request->get('adress2');
-        // $listing->city = $request->get('city');
-        // $listing->state = $request->get('state');
-        // $listing->zipcode = $request->get('zipcode');
-        // $listing->bedrooms = $request->get('bedrooms');
-        // $listing->bathrooms = $request->get('bathrooms');
-        // $listing->squarefootage = $request->get('squarefootage');
-        // $listing->status = "draft";
-        // $listing->slug = Helper::slugify("{$request->adress}-{$request->adress2}-{$request->city}-{$request->state}-{$request->zipcode}");
 
         $photo->save();
 
@@ -125,8 +117,32 @@ class PhotoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($slug, $id, $photo_id)
     {
-        //
+        $photo = Photo::find($photo_id);
+        // $this->authorize('delete', $listing);
+ 
+        $photo->delete();
+
+        return redirect("/admin/listings/{$slug}/{$id}/photos")->with('success', 'Photo Deleted Successfully');
+    }
+
+    public function featured($slug, $id, $photo_id)
+    {
+        $old_photo = Photo::where([
+            'listing_id' => $id,
+            'featured' => 1,
+            ])->first();
+        $old_photo->featured = 0;
+        $old_photo->save();
+
+        $new_photo = Photo::where([
+            'listing_id' => $id,
+            'id' => $photo_id,
+            ])->first();
+        $new_photo->featured = 1;
+        $new_photo->save();
+
+        return redirect("/admin/listings/{$slug}/{$id}/photos")->with('success', 'Photo Has Been Made Featured Successfully');
     }
 }
