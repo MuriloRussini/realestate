@@ -64,9 +64,7 @@ Route::get('/', function () {
 Route::get('/listing/{slug}/{id}', [\App\Http\Controllers\Front\ListingController::class, 'show'])->name('frontlisting.show');
 
 // Show all listings
-Route::get('/{property_type}/{listing_type}/{city}', function () {
-    return view('pages/listings');
-})->name('listings');
+Route::get('/{property_type}/{listing_type?}/{state?}/{city?}/{zipcode?}', [\App\Http\Controllers\Front\ListingController::class, 'index'])->name('frontlisting.index');
 
 // // User Login
 // Route::get('/home/login', function () {
